@@ -27,6 +27,7 @@
     self.yearLabel.text = item.year;
     self.ratingAverage.text = [NSString stringWithFormat:@"%.1f", item.ratingAverage];
     self.ratingStars.text = [NSString stringWithFormat:@"%d", item.ratingStars];
+    NSLog(@"url : %@", item.imageSmall);
     [self.imageView setImageUrl:item.imageSmall];
 }
 

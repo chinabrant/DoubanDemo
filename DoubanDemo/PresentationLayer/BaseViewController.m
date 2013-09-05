@@ -26,7 +26,22 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+	UIImageView *backView = [[[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 20, 20)] autorelease];
+    backView.userInteractionEnabled = YES;
+    UITapGestureRecognizer *tap = [[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(back)] autorelease];
+    [backView addGestureRecognizer:tap];
+    
+    backView.image = [UIImage imageNamed:@"btn_back.png"];
+    UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithCustomView:backView];
+    //    UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"btn_back.png"] style:nil target:self action:nil];
+    [self.navigationItem setLeftBarButtonItem:backItem];
+    [backItem release];
+}
+
+- (void)back {
+    [self.navigationController popViewControllerAnimated:YES];
+    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning

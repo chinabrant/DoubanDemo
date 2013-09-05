@@ -30,6 +30,11 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     
+    // 更改navigationbar的背景
+    UIImage *backgroundImage = [UIImage imageNamed:@"nav_bg.png"];
+    backgroundImage = [backgroundImage resizableImageWithCapInsets:UIEdgeInsetsMake(20, 20, 20, 300)];
+    [[UINavigationBar appearance] setBackgroundImage:backgroundImage forBarMetrics:UIBarMetricsDefault];
+    
     MainViewController *root = [[[MainViewController alloc] init] autorelease];
 //    self.window.rootViewController = root;
     
