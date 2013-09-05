@@ -68,6 +68,7 @@
 
 - (void)startSearch {
     UITextField *field = (UITextField *) [self.view viewWithTag:FieldTag];
+    [field resignFirstResponder];
     NSString *searchString = field.text;
     if (searchString == nil || [searchString isEqualToString:@""]) {
         field.placeholder = @"搜索内容不能为空";
