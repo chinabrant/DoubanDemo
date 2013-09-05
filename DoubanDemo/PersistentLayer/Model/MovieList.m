@@ -11,29 +11,34 @@
 
 @implementation MovieList
 
-@synthesize list;
+@synthesize itemList;
+@synthesize queryString;
+@synthesize start;
+@synthesize total;
 
 - (id)init
 {
     self = [super init];
     if (self) {
-        list = [[NSMutableArray alloc] init];
+        itemList = [[NSMutableArray alloc] init];
+        self.start = 0;
+        self.total = 0;
     }
     
     return self;
 }
 
 - (void)addMovieItem:(MovieItem *)item {
-    if (list == nil) {
-        list = [[NSMutableArray alloc] init];
+    if (itemList == nil) {
+        itemList = [[NSMutableArray alloc] init];
     }
     
-    [list addObject:item];
+    [itemList addObject:item];
 }
 
 - (void)dealloc
 {
-    [list release];
+    [itemList release];
     [super dealloc];
 }
 

@@ -50,10 +50,21 @@
 @property (nonatomic, copy) NSString * title;               // 中文名
 @property (nonatomic, copy) NSString * originalTitle;       // 原名
 @property (nonatomic, copy) NSString * alt;
-@property (nonatomic, copy) NSString * images;              // 海报
-@property (nonatomic, copy) NSString * rating;              // 评分
+//@property (nonatomic, copy) NSString * images;              // 海报
+@property (nonatomic, copy) NSString * imageSmall;
+@property (nonatomic, copy) NSString * imageLarge;
+@property (nonatomic, copy) NSString * imageMedium;
+
+//@property (nonatomic, copy) NSString * rating;              // 评分
+@property (nonatomic, assign) int ratingMax;
+@property (nonatomic, assign) float ratingAverage;
+@property (nonatomic, assign)  int ratingStars;
+@property (nonatomic, assign) int ratingMin;
+
 @property (nonatomic, copy) NSString * pubdates;        // 上映日期
 @property (nonatomic, copy) NSString * year;                // year
 @property (nonatomic, copy) NSString * subtype;          // 条目分类 movie or tv
+
+@property (nonatomic, assign) int collectCount;
 
 @end

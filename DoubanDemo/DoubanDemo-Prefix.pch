@@ -13,3 +13,30 @@
     #import <Foundation/Foundation.h>
     #import <CoreData/CoreData.h>
 #endif
+
+#define COUNT 10
+#define API_HEAD @"https://api.douban.com/"
+/*
+    错误返回
+    {
+        "msg" : "uri_not_found",
+        "code" : 1001,
+        "request" : "Get \/v2\/photo\/132"
+    }
+ */
+
+
+/*
+    电影搜索api   params     q ==> ( query string )  tag ==> ( tag query string ) start ==> ( start :default is 0 )  count ==> ( count: default is 20 , max is 20 too )
+ 
+    接口返回值 json
+    1、start
+    2、count
+    3、total 总数
+    4、query 搜索字符串
+    5、tag 搜索标签
+    6、subjects 搜索结果列表
+ */
+#define MOVIE_SEARCH @"v2/movie/search?"
+
+#define MOVIE_ITEM_INFO @"v2/movie/subject/"

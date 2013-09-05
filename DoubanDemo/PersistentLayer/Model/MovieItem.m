@@ -14,8 +14,8 @@
 @synthesize title;
 @synthesize originalTitle;
 @synthesize alt;
-@synthesize images;
-@synthesize rating;
+//@synthesize images;
+//@synthesize rating;
 @synthesize pubdates;
 @synthesize year;
 @synthesize subtype;

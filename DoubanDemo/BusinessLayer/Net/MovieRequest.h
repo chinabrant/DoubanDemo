@@ -8,11 +8,20 @@
 
 #import <Foundation/Foundation.h>
 #import "ASIHTTPRequest.h"
+@class MovieList;
+
+@protocol MovieRequestDelegate <NSObject>
+
+- (void)didFinishedRequestMovie:(MovieList *)list;
+
+@end
 
 @interface MovieRequest : NSObject <ASIHTTPRequestDelegate> {
 //    ASIHTTPRequest * http;
 }
 
-- (void)startRequest;
+@property (nonatomic, retain) id <MovieRequestDelegate> delegate;
+
+- (void)startRequestWithStartPosition:(int)start andString:(NSString *)q;
 
 @end

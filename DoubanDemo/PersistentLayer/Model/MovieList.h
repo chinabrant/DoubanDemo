@@ -11,7 +11,10 @@
 
 @interface MovieList : NSObject
 
-@property (nonatomic, retain) NSMutableArray * list;
+@property (nonatomic, assign) int total;
+@property (nonatomic, copy) NSString *queryString;
+@property (nonatomic, assign) int start;
+@property (nonatomic, retain) NSMutableArray *itemList;
 
 - (void)addMovieItem:(MovieItem *)item;
 

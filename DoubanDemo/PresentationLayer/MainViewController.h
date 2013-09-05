@@ -7,7 +7,12 @@
 //
 
 #import "BaseViewController.h"
+#import "MovieRequest.h"
+@class MovieList;
 
-@interface MainViewController : BaseViewController
+@interface MainViewController : BaseViewController <UITableViewDataSource, UITableViewDelegate, MovieRequestDelegate> {
+    UITableView *_tableView;
+    MovieList *movieList;
+}
 
 @end
